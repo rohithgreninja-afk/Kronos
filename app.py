@@ -1,4 +1,4 @@
-# app.py — Kronos Flask entry point
+# app.py: Kronos Flask entry point
 
 from flask import Flask, request, jsonify, render_template
 from scheduler import fcfs, sjf, priority_scheduling, round_robin

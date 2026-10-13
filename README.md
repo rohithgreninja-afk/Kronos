@@ -17,12 +17,12 @@ with animated Gantt charts, real-time PCB state tracking, and process metrics.
 
 ## Features
 
-- **4 scheduling algorithms** — FCFS, SJF, Priority, Round Robin
-- **Animated Gantt chart** — live visual timeline per simulation run
-- **Process metrics** — CT, TAT, WT, RT per process with computed averages
-- **Dark Cherry + Glassmorphism UI** — high-contrast deep red and black design
-- **REST API** — `/schedule` endpoint accepts JSON, returns structured results
-- **Stateless** — no database, runs entirely in memory
+- **4 scheduling algorithms** - FCFS, SJF, Priority, Round Robin
+- **Animated Gantt chart** - live visual timeline per simulation run
+- **Process metrics** - CT, TAT, WT, RT per process with computed averages
+- **Dark Cherry + Glassmorphism UI** - high-contrast deep red and black design
+- **REST API** - `/schedule` endpoint accepts JSON, returns structured results
+- **Stateless** - no database, runs entirely in memory
 
 ---
 
@@ -93,7 +93,7 @@ Open **http://localhost:5000** in your browser.
 |-------|------------|
 | Backend | Python 3 + Flask |
 | Frontend | Vanilla JS + HTML |
-| Styling | Pure CSS — Glassmorphism |
+| Styling | Pure CSS, Glassmorphism |
 
 ---
 
@@ -116,7 +116,7 @@ Kronos/
 
 <div align="center">
 
-Built by **Rohith Ram V** — VIT Vellore, B.Tech CSE (5th Sem)
-OS Lab Mini Project — BCSE303L
+Built by **Rohith Ram V** - VIT Vellore, B.Tech CSE (5th Sem)
+OS Lab Mini Project - BCSE303L
 
 </div>

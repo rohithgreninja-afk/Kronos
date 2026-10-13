@@ -1,5 +1,5 @@
-// main.js — Kronos UI logic, API calls, animations
-// Phase 2 — do not edit until Phase 1 backend is complete
+// main.js: Kronos UI logic, API calls, animations
+// Phase 2: do not edit until Phase 1 backend is complete
 
 const COLORS = [
   { bg: '#B89AAA', text: '#1A0F1C' },
@@ -119,7 +119,7 @@ runBtn.addEventListener('click', async () => {
     renderGantt(data.timeline);
     renderMetrics(data.metrics, data.averages);
   } catch {
-    ganttContainer.innerHTML = '<p class="empty-state">Server error — is app.py running?</p>';
+    ganttContainer.innerHTML = '<p class="empty-state">Server error. Is app.py running?</p>';
   } finally {
     runBtn.textContent = 'Run Simulation';
     runBtn.disabled = false;
@@ -196,14 +196,17 @@ function renderMetrics(metrics, averages) {
     tbody.appendChild(tr);
   }
 
+  const n = metrics.length;
+  const mean = key => n ? (metrics.reduce((s, m) => s + m[key], 0) / n).toFixed(2) : '';
+
   const avgRow = document.createElement('tr');
   avgRow.className = 'averages-row';
   avgRow.innerHTML =
     '<td>Averages</td>' +
-    '<td>—</td>' +
-    '<td>—</td>' +
-    '<td>' + averages.avg_TAT.toFixed(2) + '</td>' +
-    '<td>' + averages.avg_WT.toFixed(2) + '</td>';
+    '<td>' + mean('CT') + '</td>' +
+    '<td>' + mean('TAT') + '</td>' +
+    '<td>' + mean('WT') + '</td>' +
+    '<td>' + mean('RT') + '</td>';
   tbody.appendChild(avgRow);
 
   table.appendChild(tbody);

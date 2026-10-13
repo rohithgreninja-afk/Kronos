@@ -1,4 +1,4 @@
-# scheduler.py — Kronos scheduling algorithms
+# scheduler.py: Kronos scheduling algorithms
 # See PHASE_1_INSTRUCTIONS.md → File 2 for full spec
 # 4 functions to implement: fcfs, sjf, priority_scheduling, round_robin
 

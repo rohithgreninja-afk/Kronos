@@ -1,4 +1,4 @@
-# process.py — Kronos PCB (Process Control Block) data model
+# process.py: Kronos PCB (Process Control Block) data model
 # See PHASE_1_INSTRUCTIONS.md → File 1 for full spec
 
 class Process:

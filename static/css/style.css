@@ -1,6 +1,6 @@
-/* style.css — Kronos frontend styling */
+/* style.css: Kronos frontend styling */
 /* Design: P6 Dark Cherry + Glassmorphism */
-/* Phase 2 — do not edit until Phase 1 backend is complete */
+/* Phase 2: do not edit until Phase 1 backend is complete */
 
 :root {
   --bg:            #1A0F1C;
@@ -27,8 +27,10 @@ body {
   color: var(--text);
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
-  padding: 16px;
+  padding: 24px 32px 32px;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -40,7 +42,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .logo {
@@ -59,9 +61,10 @@ body {
 .main-grid {
   display: grid;
   grid-template-columns: minmax(320px, 360px) minmax(0, 1fr);
-  gap: 16px;
-  align-items: start;
+  gap: 24px;
+  align-items: stretch;
   max-width: 100%;
+  flex: 1;
 }
 
 .input-panel {
@@ -239,8 +242,12 @@ body {
 .right-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   min-width: 0;
+}
+
+.right-col > .result-panel:last-child {
+  flex: 1;
 }
 
 .result-panel {
@@ -326,9 +333,10 @@ body {
 }
 
 .averages-row td {
-  background: var(--mid);
-  color: var(--bg);
+  background: var(--border);
+  color: var(--text);
   font-weight: 600;
+  border-top: 1px solid var(--accent);
 }
 
 .fade-in {
